@@ -13,8 +13,6 @@
 //    4. Store the result in message
 //    5. Print the message
 
-let isLoggedIn = true;
-let isProfileComplete = false;
 
 let message;
 
