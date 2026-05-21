@@ -1,16 +1,46 @@
-# React + Vite
+# Week 08 - React Context Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Overview
+- This project demonstrates React Context usage across multiple components.
+- It uses two context providers: `UserContextProvider` and `CounterContextProvider`.
+- The UI is composed of three sibling components: `A`, `B`, and `C`.
 
-Currently, two official plugins are available:
+Learning goals
+- Understand how to share state without prop drilling.
+- See how multiple contexts can coexist in one app.
+- Compare component-local structure with shared app-level state.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Project structure
+- `src/main.jsx` - app entry point that wraps the app with both providers.
+- `src/App.jsx` - root component.
+- `src/components/A.jsx` - consumer component.
+- `src/components/B.jsx` - consumer component.
+- `src/components/C.jsx` - consumer component.
+- `src/contexts/UserContextProvider.jsx` - user context provider.
+- `src/contexts/CounterContextProvider.jsx` - counter context provider.
+- `src/store/TestStore.js` - store/helper module used by the demo.
 
-## React Compiler
+Tech stack
+- React 19
+- Vite
+- Tailwind CSS v4
+- Zustand
+- ESLint
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+How to run
 
-## Expanding the ESLint configuration
+```bash
+cd Week_08_react-context-demo
+npm install
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Available scripts
+- `npm run dev` - start the Vite development server.
+- `npm run build` - create a production build.
+- `npm run preview` - preview the production build locally.
+- `npm run lint` - run ESLint.
+
+Submission notes
+- Explain how Context reduces prop drilling in this demo.
+- If you update the providers, describe which state is shared and which components consume it.

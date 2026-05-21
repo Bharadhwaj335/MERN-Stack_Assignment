@@ -1,16 +1,35 @@
-# React + Vite
+# Week 07 - React Hands-On Phase 01
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Overview
+- This phase is a small Vite + React practice app focused on component composition and simple product rendering.
+- The app renders two components from `src/components`: `Product.jsx` and `Products.jsx`.
 
-Currently, two official plugins are available:
+Project structure
+- `src/main.jsx` - React entry point.
+- `src/App.jsx` - root component that mounts the phase UI.
+- `src/components/Product.jsx` - individual product card / item component.
+- `src/components/Products.jsx` - parent component that likely renders a product collection.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Tech stack
+- React 19
+- Vite
+- Tailwind CSS v4
+- ESLint
 
-## React Compiler
+How to run
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+cd Week_07/react-hands-on-phase-01
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+Available scripts
+- `npm run dev` - start the Vite development server.
+- `npm run build` - create a production build.
+- `npm run preview` - preview the production build locally.
+- `npm run lint` - run ESLint.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Submission notes
+- Mention the component hierarchy in your report.
+- Add screenshots of the rendered product UI and briefly explain how data flows from parent to child components.

@@ -1,16 +1,36 @@
-# React + Vite
+# Week 07 - React Hands-On Phase 03
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Overview
+- This phase is a country search/list demo built with Vite + React.
+- The UI is split into searchable list views and card-style displays.
 
-Currently, two official plugins are available:
+Project structure
+- `src/main.jsx` - React entry point.
+- `src/App.jsx` - root component.
+- `src/components/SearchBar.jsx` - search input component.
+- `src/components/CountryList.jsx` - list container for countries.
+- `src/components/CountryCard.jsx` - card display for a single country.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Tech stack
+- React 19
+- Vite
+- Tailwind CSS v4
+- ESLint
 
-## React Compiler
+How to run
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+cd Week_07/react-hands-on-phase-03
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+Available scripts
+- `npm run dev` - start the Vite development server.
+- `npm run build` - create a production build.
+- `npm run preview` - preview the production build locally.
+- `npm run lint` - run ESLint.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Submission notes
+- Document the search workflow and how list rendering is handled.
+- Include screenshots of the search bar and result cards if your mentor expects visual proof.

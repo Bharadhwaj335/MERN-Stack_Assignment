@@ -1,16 +1,43 @@
-# React + Vite
+# Week 08 - User Management Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Overview
+- This is the React frontend for the user management fullstack app.
+- It is built with Vite and React and is intended to work with the backend API in the sibling `Backend` folder.
 
-Currently, two official plugins are available:
+Learning goals
+- Build a frontend shell for user management features.
+- Separate UI concerns from API and database logic.
+- Prepare the frontend for later API integration and deployment.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Project structure
+- `src/main.jsx` - app entry point.
+- `src/App.jsx` - top-level component tree.
+- `src/components/` - UI components for the user management workflow.
+- `src/assets/` - static assets used by the frontend.
 
-## React Compiler
+Tech stack
+- React 19
+- Vite
+- Tailwind CSS v4
+- ESLint
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+How to run
 
-## Expanding the ESLint configuration
+```bash
+cd Week_08_user-management-app/Frontend
+npm install
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Available scripts
+- `npm run dev` - start the Vite development server.
+- `npm run build` - create a production build.
+- `npm run preview` - preview the production build locally.
+- `npm run lint` - run ESLint.
+
+Deployment
+- No Vercel deployment link is documented yet. Add the deployed URL here once the frontend is published.
+
+Submission notes
+- Mention how the frontend communicates with the backend API.
+- Include screenshots of the user-management screens and describe the main user flows.
