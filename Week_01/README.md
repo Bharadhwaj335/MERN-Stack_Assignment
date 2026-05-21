@@ -11,10 +11,7 @@ Contents
 - [Array-Operations_Advanced.js](Week_01/Array-Operations_Advanced.js#L1) - more advanced array transformations.
 - [Object-operations-simple.js](Week_01/Object-operations-simple.js#L1) - reading and updating object values.
 
-What to mention in your submission
-- Explain the difference between operators and control statements.
-- Show how arrays are traversed and transformed.
-- Describe how object properties are accessed and changed.
+
 
 How to use
 
