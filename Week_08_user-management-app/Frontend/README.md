@@ -4,18 +4,45 @@ Overview
 - This is the React frontend for the user management fullstack app.
 - It is built with Vite and React and is intended to work with the backend API in the sibling `Backend` folder.
 
-Learning goals
+Folder Tree
+```text
+Frontend/
+├── src/
+│   ├── main.jsx
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   ├── components/
+│   │   ├── RootLayout.jsx
+│   │   ├── Header.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Home.jsx
+│   │   ├── AddUser.jsx
+│   │   ├── UserList.jsx
+│   │   └── User.jsx
+│   └── assets/
+├── public/
+├── package.json
+└── README.md
+```
+
+Learning Goals
 - Build a frontend shell for user management features.
 - Separate UI concerns from API and database logic.
 - Prepare the frontend for later API integration and deployment.
 
-Project structure
-- `src/main.jsx` - app entry point.
-- `src/App.jsx` - top-level component tree.
-- `src/components/` - UI components for the user management workflow.
-- `src/assets/` - static assets used by the frontend.
+Project Structure Notes
+- `src/App.jsx` configures the routes.
+- `RootLayout.jsx` provides the shared layout.
+- `Home.jsx`, `AddUser.jsx`, `UserList.jsx`, and `User.jsx` are the main routed views.
 
-Tech stack
+Route Map
+- `/` - home page
+- `/add-user` - add user form
+- `/users-list` - list of users
+- `/user` - single user page
+
+Tech Stack
 - React 19
 - Vite
 - Tailwind CSS v4

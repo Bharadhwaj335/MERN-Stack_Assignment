@@ -1,4 +1,4 @@
-# Week 06 — HTML/CSS Assignments
+# Week 06 - HTML/CSS Assignments
 
 Overview
 - Collection of small frontend assignments (pure HTML/CSS) demonstrating layout, styling, and responsive grid practice.
@@ -31,4 +31,31 @@ Reference files
 
 How to view
 - Open the `index.html` files in a browser (right-click → Open with Live Server if you use VS Code Live Server extension), or open the file path in your browser.
+
+Folder Tree
+```text
+Week_06/
+├── Assignment_01/
+│   ├── index.html
+│   └── style.css
+├── Assignment_02/
+│   ├── iweb_page_01_index.html
+│   ├── web_page_01_style.css
+│   ├── web_page_02_index.html
+│   └── web_page_02_style.css
+├── Assignment_03/
+│   ├── index.html
+│   └── style.css
+├── Assignment_Grid_01/
+│   ├── index.html
+│   └── style.css
+├── Assignment_Grid_02/
+│   ├── index.html
+│   └── style.css
+└── README.md
+```
+
+Notes for submission
+- Include screenshots of pages and mention viewport widths tested. Show which CSS properties you practiced (flexbox, grid, media queries).
+- There is no Vercel deployment link documented for this week.
 

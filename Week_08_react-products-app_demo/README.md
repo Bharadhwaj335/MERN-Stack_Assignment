@@ -4,34 +4,51 @@ Overview
 - This project is a React Router based product demo built with Vite.
 - The app uses a root layout and multiple route-driven pages.
 
-Learning goals
+Folder Tree
+```text
+Week_08_react-products-app_demo/
+├── src/
+│   ├── main.jsx
+│   ├── App.jsx
+│   ├── index.css
+│   ├── App.css
+│   ├── components/
+│   │   ├── RootLayout.jsx
+│   │   ├── Header.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Home.jsx
+│   │   ├── ProductList.jsx
+│   │   ├── Product.jsx
+│   │   └── ContactUs.jsx
+│   └── assets/
+├── public/
+├── package.json
+└── README.md
+```
+
+Learning Goals
 - Configure nested routing with React Router.
 - Reuse a common layout across multiple pages.
 - Practice page-based navigation in a small React app.
 
-Project structure
-- `src/main.jsx` - React entry point.
-- `src/App.jsx` - router configuration.
-- `src/components/RootLayout.jsx` - shared page layout.
-- `src/components/Header.jsx` - top navigation/header.
-- `src/components/Footer.jsx` - footer section.
-- `src/components/Home.jsx` - landing page.
-- `src/components/ProductList.jsx` - product listing page.
-- `src/components/Product.jsx` - single product page.
-- `src/components/ContactUs.jsx` - contact page.
-
-Tech stack
-- React 19
-- Vite
-- React Router
-- Tailwind CSS v4
-- ESLint
+Project Structure Notes
+- `src/App.jsx` defines the router configuration.
+- `src/components/RootLayout.jsx` is the shared wrapper for pages.
+- `Header.jsx` and `Footer.jsx` create the common layout shell.
+- `Home.jsx`, `ProductList.jsx`, `Product.jsx`, and `ContactUs.jsx` are the routed pages.
 
 Routes
 - `/` - home page
 - `/productList` - product list page
 - `/product` - product detail page
 - `/contact` - contact page
+
+Tech Stack
+- React 19
+- Vite
+- React Router
+- Tailwind CSS v4
+- ESLint
 
 How to run
 
@@ -47,6 +64,5 @@ Available scripts
 - `npm run preview` - preview the production build locally.
 - `npm run lint` - run ESLint.
 
-Submission notes
-- Mention how routing is configured in `App.jsx`.
-- Include screenshots of each route and note how the shared layout is reused.
+Deployment
+- No Vercel deployment link is documented for this demo yet.

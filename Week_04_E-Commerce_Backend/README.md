@@ -1,118 +1,77 @@
-# Week 04: Advanced E-Commerce Backend
+# Week 04 - Advanced E-Commerce Backend
 
-This is a full-featured MERN stack backend application with MongoDB integration, JWT authentication, and complete user and product management APIs.
+Overview
+- This is the advanced backend version of the e-commerce practice project.
+- It adds MongoDB, Mongoose models, cookie handling, and route protection on top of the earlier Express structure.
 
-## Features
-
-### Authentication & Authorization
-- User registration with password hashing (bcrypt)
-- User login with JWT token generation
-- Cookie-based session management
-- Protected routes using middleware
-
-### User Management
-- User registration
-- User login/logout
-- User profile management
-- Password hashing for security
-
-### Product Management
-- Create products
-- Read/list products
-- Update products
-- Delete products
-
-## Project Structure
-
-```
-Week_04_Advanced_Backend/
+Folder Tree
+```text
+Week_04_E-Commerce_Backend/
+├── server.js
+├── testing.http
+├── package.json
+├── package-lock.json
 ├── APIs/
-│   ├── user_api.js       # User routes and controllers
-│   └── product_api.js    # Product routes and controllers
+│   ├── product_api.js
+│   └── user_api.js
 ├── Middleware/
-│   └── middleware1.js    # Authentication middleware
+│   └── middleware1.js
 ├── models/
-│   ├── user_model.js     # User MongoDB schema
-│   └── product_model.js  # Product MongoDB schema
-├── server.js             # Main application entry point
-├── package.json          # Dependencies and scripts
-└── testing.http          # HTTP requests for testing
+│   ├── product_model.js
+│   └── user_model.js
+└── .gitignore
 ```
 
-## Technologies Used
+Features
+- User registration and login flow.
+- JWT-based authentication.
+- Cookie-based token storage.
+- Product CRUD operations.
+- Middleware-based route protection.
 
-- **Express.js** (v5.2.1): Web framework
-- **MongoDB** with **Mongoose** (v9.1.5): Database and ODM
-- **JWT** (jsonwebtoken): Token-based authentication
-- **bcrypt.js**: Password hashing
-- **cookie-parser**: Cookie handling
-- **nodemon**: Development auto-restart
+Main Files
+- [server.js](Week_04_E-Commerce_Backend/server.js#L1) - application bootstrap and route mounting.
+- [APIs/user_api.js](Week_04_E-Commerce_Backend/APIs/user_api.js#L1) - user routes.
+- [APIs/product_api.js](Week_04_E-Commerce_Backend/APIs/product_api.js#L1) - product routes.
+- [Middleware/middleware1.js](Week_04_E-Commerce_Backend/Middleware/middleware1.js#L1) - authentication middleware.
+- [models/user_model.js](Week_04_E-Commerce_Backend/models/user_model.js#L1) - user schema.
+- [models/product_model.js](Week_04_E-Commerce_Backend/models/product_model.js#L1) - product schema.
 
-## Setup Instructions
+Schemas
+- User schema: `username`, `password`, `email`, and `cart`.
+- Cart sub-schema: `product` as an ObjectId reference to the product model and `quantity` with a minimum of 1.
+- Product schema: `pid`, `productname`, `price`, and `brandname`.
+- Both schemas use strict mode, timestamps, and validation rules.
 
-### Prerequisites
-- Node.js (v14 or higher)
-- MongoDB running on `localhost:27017`
+Technology Stack
+- Express
+- MongoDB
+- Mongoose
+- JWT
+- bcryptjs
+- cookie-parser
 
-### Installation
+Setup
 
 ```bash
-cd Week_04_Advanced_Backend
+cd Week_04_E-Commerce_Backend
 npm install
+node server.js
 ```
 
-### Running the Application
+For development reload:
 
 ```bash
-# Start the server
-node server.js
-
-# Or for development with auto-restart
 npx nodemon server.js
 ```
 
-The server will start on `http://localhost:3000`
+Testing
+- Use `testing.http` with VS Code REST Client or Postman.
+- Verify authentication, product CRUD, and protected route behavior.
 
-## API Endpoints
+Database
+- The app connects to `mongodb://localhost:27017/e-commerce`.
+- Make sure MongoDB is running before starting the server.
 
-### User API (`/user-api`)
-- `POST /user-api/register` - Register a new user
-- `POST /user-api/login` - Login user
-- `GET /user-api/profile` - Get user profile (protected)
-- Additional user operations...
-
-### Product API (`/product-api`)
-- `POST /product-api/products` - Create a new product
-- `GET /product-api/products` - Get all products
-- `GET /product-api/products/:id` - Get product by ID
-- `PUT /product-api/products/:id` - Update product
-- `DELETE /product-api/products/:id` - Delete product
-
-## Testing
-
-Use the `testing.http` file with REST Client extension in VS Code or any HTTP client to test the endpoints.
-
-## Database Configuration
-
-The application connects to MongoDB at:
-```
-mongodb://localhost:27017/e-commerce
-```
-
-Make sure MongoDB is running before starting the application.
-
-## Security Features
-
-- Passwords are hashed using bcrypt before storing
-- JWT tokens for stateless authentication
-- HTTP-only cookies for secure token storage
-- Authentication middleware to protect routes
-- Error handling middleware for graceful error responses
-
-## Development Notes
-
-This is the advanced version (Week 4) that builds upon the basic Express backend from Week 3, adding:
-- Database persistence with MongoDB
-- User authentication and authorization
-- Security best practices
-- Production-ready error handling
+Deployment
+- No Vercel deployment link is documented for this backend.
