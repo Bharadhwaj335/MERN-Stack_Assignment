@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
 
+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || "http://localhost:4000";
+
 function AddUser() {
   const {
     register,
@@ -20,7 +22,7 @@ function AddUser() {
 
     // make HTTP POST req to create new user
     try {
-      let res = await fetch("http://localhost:4000/user-api/users", {
+      let res = await fetch(`${apiBaseUrl}/user-api/users`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

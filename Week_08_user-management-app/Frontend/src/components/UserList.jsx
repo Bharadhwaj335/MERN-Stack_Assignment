@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 
+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || "http://localhost:4000";
+
 function UserList() {
   let [users, setUsers] = useState([]);
   let navigate = useNavigate();
@@ -8,7 +10,7 @@ function UserList() {
   useEffect(() => {
     async function getUsers() {
       try {
-        let res = await fetch("http://localhost:4000/user-api/users", {
+        let res = await fetch(`${apiBaseUrl}/user-api/users`, {
           method: "GET",
         });
 

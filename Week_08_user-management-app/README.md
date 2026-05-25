@@ -56,5 +56,7 @@ npm run dev
 ```
 
 Deployment
-- No Vercel deployment link is documented for the fullstack app root yet.
+- Frontend deployment requires `VITE_API_BASE_URL` to point to the deployed backend.
+- Backend deployment requires `CORS_ORIGIN` to include the deployed frontend origin.
+- The frontend includes a `vercel.json` rewrite so React Router paths load correctly on refresh.
 

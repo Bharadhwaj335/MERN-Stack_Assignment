@@ -63,7 +63,9 @@ Available scripts
 - `npm run lint` - run ESLint.
 
 Deployment
-- No Vercel deployment link is documented yet. Add the deployed URL here once the frontend is published.
+- Set `VITE_API_BASE_URL` to the deployed backend URL before building for production.
+- The included `vercel.json` rewrite keeps React Router routes working on refresh.
+- Add the deployed frontend URL here once the app is published.
 
 Submission notes
 - Mention how the frontend communicates with the backend API.

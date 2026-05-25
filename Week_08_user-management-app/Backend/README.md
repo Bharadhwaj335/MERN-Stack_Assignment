@@ -61,4 +61,6 @@ Testing
 - Use `testing.http` in VS Code REST Client or another API client to exercise the endpoints.
 
 Deployment
-- No Vercel deployment link is documented yet. Add the deployed API URL here if this backend is published later.
+- When deploying, set `DB_URL`, `PORT`, and `CORS_ORIGIN` in the hosting environment.
+- `CORS_ORIGIN` can contain one or more comma-separated frontend URLs.
+- Add the deployed API URL here if the backend is published later.

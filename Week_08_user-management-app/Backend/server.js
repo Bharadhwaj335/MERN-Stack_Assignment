@@ -10,10 +10,15 @@ config();
 // Create HTTP server
 const app = exp();
 
+const allowedOrigins = (process.env.CORS_ORIGIN || "http://localhost:5173")
+  .split(",")
+  .map((origin) => origin.trim())
+  .filter(Boolean);
+
 //add cors
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: allowedOrigins,
   }),
 );
 
